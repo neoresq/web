@@ -1,42 +1,42 @@
+import React from 'react';
+import styled from 'styled-components';
+import NavigationButtons from '../components/NavigationButtons';
+import Paper from '../components/Paper';
 import Navbar from '../components/Navbar';
-import Logo from '../svgs/logo.svg';
 
-const Index = props => {
-  return (
-    <div className="vh-100">
-      <Navbar />
-      <main>
-        <article className="bg-white">
-          <div
-            className="vh-75 cover bg-center"
-            style={{backgroundImage: 'url(/static/bg-spring.jpg)'}}
-          >
-            <div className="dt w-100 h-100">
-              <div className="dtc v-mid tc">
-                <h1 className="f-headline mw6 red">Saving lives like never before</h1>
-              </div>
-            </div>
-          </div>
+const MainBody = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+`;
+const Topbar = styled.div`
+  width: 100%;
+  height: 5px;
+  background-color: red;
+`;
 
-          <div className="ph4 ph5-m ph6-l">
-            <div className="pv5 f4 f2-ns measure center">
-              <h1 className="fw6 f1 fl w-100 black-70 mt0 mb3 avenir">
-                Project Title #034
-              </h1>
-              <p
-                className="db lh-copy black-70 serif fw1 mv0 f4 f3-m f2-l measure baskerville"
-              >
-                A short description of your project. Maybe a few notes concerning your
-                constraints and process.  Standard lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore etc. al dolore magna
-                aliqua. Ut enim ad.
-              </p>
-            </div>
-          </div>
-        </article>
-      </main>
-    </div>
-  );
-};
-
-export default Index;
+export default () => (
+  <MainBody>
+    <Topbar />
+    <Navbar />
+    <h1 className="ff-lobster">Hallo, verden!</h1>
+    <div></div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <NavigationButtons />
+  </MainBody>
+);
